@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import Collection from "./pages/Collection";
 import About from "./pages/About";
 import Product from "./pages/Product";
@@ -10,10 +10,13 @@ import PlaceOrder from "./pages/PlaceOrder";
 import Orders from "./pages/Orders";
 import Navbar from "./components/Navbar";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
+import SearchBar from "./components/SearchBar";
 const App = () => {
   return (
     <>
       <Navbar />
+      <SearchBar />
 
       <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] ">
         <Routes>
@@ -27,6 +30,7 @@ const App = () => {
           <Route path="/placeorder" element={<PlaceOrder />} />
           <Route path="/orders" element={<Orders />} />
         </Routes>
+        <Footer />
       </div>
     </>
   );
