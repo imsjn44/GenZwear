@@ -12,9 +12,12 @@ import Navbar from "./components/Navbar";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import SearchBar from "./components/SearchBar";
+import { ToastContainer, toast } from "react-toastify";
+
 const App = () => {
   return (
     <>
+      <ToastContainer autoClose={2000} />
       <Navbar />
       <SearchBar />
 
