@@ -16,7 +16,7 @@ const NewsLetterBox = () => {
       </p>
       <form
         onSubmit={onSubmitHandler}
-        className="w-full sm:w-1/2 flex gap-3 mx-auto my-6 border"
+        className="w-full sm:w-1/2 flex gap-3 mx-auto my-6 border border-slate-300"
       >
         <input
           className="w-full sm:flex-1 outline-none mt-3 pl-3 pb-3"
@@ -26,7 +26,7 @@ const NewsLetterBox = () => {
         />
         <button
           type="submit"
-          className="bg-black text-white text-xs px-10 py-4"
+          className="bg-black text-white text-xs px-10 py-4 cursor-pointer"
         >
           SUBSCRIBE
         </button>

@@ -3,7 +3,7 @@ import { ShopContext } from "../context/ShopContext";
 import { useContext, useEffect } from "react";
 import Title from "./Title";
 import ProductItem from "./ProductItem";
-
+import { useParams } from "react-router-dom";
 const RelatedProducts = ({ category, subCategory }) => {
   const { products } = useContext(ShopContext);
   const [related, setRelated] = useState([]);
@@ -18,7 +18,7 @@ const RelatedProducts = ({ category, subCategory }) => {
       //   console.log(productsCopy.slice(0, 5));
       setRelated(productsCopy.slice(0, 5));
     }
-  }, [products]);
+  }, [products, category, subCategory]);
 
   return (
     <div className="my-24">

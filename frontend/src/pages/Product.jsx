@@ -15,7 +15,7 @@ const Product = () => {
   useEffect(() => {
     const fetchProductData = async () => {
       products.map((item) => {
-        if (item._id == productId) {
+        if (item._id === productId) {
           setProductData(item);
           setImage(item.image[0]);
           return null;
@@ -23,6 +23,7 @@ const Product = () => {
       });
     };
     fetchProductData();
+    window.scrollTo(0, 0);
   }, [productId, products]);
   return productData ? (
     <div className="border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
