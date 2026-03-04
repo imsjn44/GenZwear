@@ -79,9 +79,9 @@ const Collection = () => {
   //   console.log(category);
   // }, [category]);
 
-  useEffect(() => {
-    console.log(subCategory);
-  }, [subCategory]);
+  // useEffect(() => {
+  //   console.log(subCategory);
+  // }, [subCategory]);
 
   return (
     <div className="flex flex-col sm:flex-row sm:gap-10 pt-10 border-t border-slate-200">
