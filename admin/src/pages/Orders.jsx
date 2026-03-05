@@ -85,22 +85,22 @@ const Orders = ({ token }) => {
                 {order.address.firstName + " " + order.address.lastName}
               </p>
               <div>
-                <p>{order.address.street + ","}</p>
+                <p>{order.address.email + ","}</p>
                 <p>
                   {order.address.city +
                     ", " +
-                    order.address.state +
+                    order.address.zipcode +
                     ", " +
-                    order.address.country +
+                    order.address.landmark +
                     ", " +
-                    order.address.zipcode}
+                    order.address.phonenumber}
                 </p>
               </div>
 
               <p>{order.address.phone}</p>
             </div>
 
-            <div>
+            <div className="mr-10">
               <p className="text-sm sm:text-[15px]">
                 Items : {order.items.length}
               </p>
