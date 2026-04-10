@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import Title from "../components/Title";
 import CartTotal from "../components/CartTotal";
 import { assets } from "../assets/assets";
@@ -70,15 +70,28 @@ const PlaceOrder = () => {
             orderData,
             { headers: { token } },
           );
+
           if (response.data.success) {
             setCartItems({});
             navigate("/orders");
           } else {
-            toast.error(response.data.message);
+            toast.error(error.message);
           }
           break;
 
-        default:
+        case "stripe":
+          const responseStripe = await axios.post(
+            backendURL + "/api/order/stripe",
+            orderData,
+            { headers: { token } },
+          );
+
+          if (responseStripe.data.success) {
+            const { session_url } = responseStripe.data;
+            window.location.replace(session_url);
+          } else {
+            toast.error(responseStripe.data.message);
+          }
           break;
       }
     } catch (error) {
@@ -138,7 +151,8 @@ const PlaceOrder = () => {
             className=" border border-gray-300 rounded py-1.5 px-3.5 w-full"
             type="text"
             placeholder="city"
-          />
+          />{" "}
+          ``
           <input
             onChange={onChangeHandler}
             name="zipcode"
@@ -184,11 +198,11 @@ const PlaceOrder = () => {
               <img src={assets.stripe_logo} alt="" className="h-5 mx-4" />
             </div>
             <div
-              onClick={() => setMethod("razorpay")}
+              onClick={() => setMethod("paypal")}
               className="flex items-center gap-3 border border-gray-300 p-2 px-3 cursor-pointer"
             >
               <p
-                className={`min-w-3.5 h-3.5 border border-slate-300 rounded-full ${method === "razorpay" ? "bg-green-400" : ""}`}
+                className={`min-w-3.5 h-3.5 border border-slate-300 rounded-full ${method === "paypal" ? "bg-green-400" : ""}`}
               ></p>
               <img src={assets.razorpay_logo} alt="" className="h-5 mx-4" />
             </div>

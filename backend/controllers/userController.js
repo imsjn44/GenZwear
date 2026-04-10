@@ -4,7 +4,7 @@ import userModel from "../models/userModel.js";
 import validator from "validator";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-
+import nodemailer from "nodemailer";
 const createToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET);
 };
@@ -98,4 +98,75 @@ const adminLogin = async (req, res) => {
     res.json({ success: false, msg: error.message });
   }
 };
-export { loginUser, registerUser, adminLogin };
+
+const forgotPassword = async (req, res) => {
+  try {
+    const { email } = req.body;
+    const user = await userModel.findOne({ email });
+
+    if (!user) {
+      return res.json({ success: false, message: "User not found" });
+    }
+
+    // Create a one-time reset token valid for 15 mins
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: "15m",
+    });
+
+    // Configuration for Nodemailer (Example: Gmail)
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: "Password Reset Link",
+      text: `Click here to reset your password: ${process.env.FRONTEND_URL}/reset-password/${token}`,
+    };
+
+    await transporter.sendMail(mailOptions);
+    res.json({ success: true, message: "Reset link sent!" });
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+};
+
+const resetPassword = async (req, res) => {
+  try {
+    const { token, newPassword } = req.body;
+
+    if (!token || !newPassword) {
+      return res.json({ success: false, message: "All fields are required" });
+    }
+
+    // 1. Verify the token sent in the email
+    // It must be the same JWT_SECRET used in forgotPassword
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    // 2. Hash the new password before saving
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(newPassword, salt);
+
+    // 3. Update user in DB based on the ID from the token
+    const user = await userModel.findByIdAndUpdate(decoded.id, {
+      password: hashedPassword,
+    });
+
+    if (!user) {
+      return res.json({ success: false, message: "User not found" });
+    }
+
+    res.json({ success: true, message: "Password reset successfully!" });
+  } catch (error) {
+    console.error(error);
+    // Error here usually means the token expired or was tampered with
+    res.json({ success: false, message: "Link expired or invalid token" });
+  }
+};
+
+export { loginUser, registerUser, adminLogin, forgotPassword, resetPassword };

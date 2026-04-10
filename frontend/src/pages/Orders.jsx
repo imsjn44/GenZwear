@@ -33,7 +33,7 @@ const Orders = () => {
             allOrderItems.push(item);
           });
         });
-        console.log(allOrderItems);
+        // console.log(allOrderItems);
         setOrderData(allOrderItems.reverse());
       }
     } catch (error) {}

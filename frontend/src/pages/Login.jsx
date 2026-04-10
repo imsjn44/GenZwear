@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import axios from "axios";
 import { toast } from "react-toastify";
-
+import { Link } from "react-router-dom";
 const Login = () => {
   const [currentState, setCurrentState] = useState("Login");
   const { token, setToken, navigate, backendURL } = useContext(ShopContext);
@@ -94,7 +94,9 @@ const Login = () => {
         required
       />
       <div className=" w-full flex justify-between">
-        <p className="cursor-pointer">Forgot your password?</p>
+        <Link to="/forgot-password" className="cursor-pointer">
+          Forgot your password?
+        </Link>
         {currentState === "Login" ? (
           <p
             onClick={() => setCurrentState("Sign Up")}
