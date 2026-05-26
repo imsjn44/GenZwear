@@ -11,7 +11,7 @@ GenZwear is a cutting-edge e-commerce platform designed specifically for the Gen
 - **Trend-Focused Catalog**: Curated collection of fashion items aligned with Gen Z style preferences
 - **Full Stack Platform**: Complete end-to-end e-commerce solution
 - **Modern UI/UX**: Intuitive and visually appealing user interface
-- **Secure Transactions**: Safe and reliable payment processing using stripe
+- **Secure Transactions**: Safe and reliable payment processing using Stripe
 - **Product Search & Filtering**: Easy discovery of fashion items
 - **Responsive Design**: Seamless experience across all devices
 
@@ -40,72 +40,97 @@ GenZwear is a cutting-edge e-commerce platform designed specifically for the Gen
 ---
 ### Homepage
 <p align="center">
-  <img width="1871" height="873" alt="Screenshot 2026-05-26 200402" src="https://github.com/user-attachments/assets/697d2951-c9e3-4af7-84f2-6cd71d90eef6" />
+<img width="1893" height="867" alt="Screenshot 2026-05-26 213308" src="https://github.com/user-attachments/assets/6d400816-9233-4b91-b519-677219e8c189" />
 
 </p>
 
 ---
-## Product Catalog
+## Latest Collection
 <p align="center">
-  <img width="1860" height="871" alt="Screenshot 2026-05-26 200426" src="https://github.com/user-attachments/assets/68566435-aec0-4673-ad12-34da083d5fa5" />
+<img width="1877" height="871" alt="Screenshot 2026-05-26 213321" src="https://github.com/user-attachments/assets/2567f2a0-aa74-4646-8712-dce5daa00ca9" />
 
 </p>
 
 ---
-### Shopping Cart
+### Best seller
 <p align="center">
-  <img width="1900" height="411" alt="Screenshot 2026-05-26 200502" src="https://github.com/user-attachments/assets/3d0b2108-515c-4c42-a7be-b7d219886e01" />
+<img width="1918" height="701" alt="Screenshot 2026-05-26 213332" src="https://github.com/user-attachments/assets/30fc3bfd-17c2-43a5-afe9-9390c42bbc24" />
 
 </p>
 
 ------
-### Shipping Address
+### Product catalog
 
 <p align="center">
 
-  <img width="1877" height="761" alt="Screenshot 2026-05-26 200546" src="https://github.com/user-attachments/assets/2cb74287-d0d4-46e4-b052-9772595fa253" />
+<img width="1907" height="842" alt="Screenshot 2026-05-26 213407" src="https://github.com/user-attachments/assets/20c73ce8-dae2-4e7c-ac3c-59f654540a30" />
 
 </p>
 
 ---
-###  Choose Payment Method
+###  Related Products
 <p align="center">
-  <img width="1915" height="593" alt="Screenshot 2026-05-26 200601" src="https://github.com/user-attachments/assets/6e3f58c9-fd09-4fd8-8386-bf8402c0f3f4" />
+  <img width="1797" height="555" alt="Screenshot 2026-05-26 213435" src="https://github.com/user-attachments/assets/a461ad31-9fbb-4461-abb1-3bdea446a9b0" />
+</p>
+
+
+
+---
+### My Cart
+<p align="center">
+<img width="1891" height="852" alt="Screenshot 2026-05-26 213451" src="https://github.com/user-attachments/assets/2609e54e-b76c-404a-8ad9-c8547d063707" />
+
 </p>
 
 
 ---
 ### Place Order
 <p align="center">
-  <img width="1877" height="840" alt="Screenshot 2026-05-26 200635" src="https://github.com/user-attachments/assets/cb2db621-55cd-40b4-bd92-15c6db2aa90b" />
+<img width="1896" height="823" alt="Screenshot 2026-05-26 213537" src="https://github.com/user-attachments/assets/95abedd4-060d-479b-8dd8-033ed6452e0c" />
 
 </p>
 
-
 ---
-## Pay with eSewa
-
+### Delivery information
 <p align="center">
-
-<img width="1866" height="853" alt="Screenshot 2026-05-26 200655" src="https://github.com/user-attachments/assets/a2760844-4ff6-41ef-aec5-4c2a18cc4a7e" />
-  <img width="558" height="386" alt="Screenshot 2026-05-26 200706" src="https://github.com/user-attachments/assets/2c6cf3fe-5b81-4faa-9d9c-38ec559f1433"   style="margin-top: 20px;"/>
-<img width="1868" height="861" alt="Screenshot 2026-05-26 200721" src="https://github.com/user-attachments/assets/cfec9232-d6de-4c7f-a508-17c723fd71fd"   style="margin-top: 20px;"/>
-<img width="1262" height="687" alt="Screenshot 2026-05-26 200909" src="https://github.com/user-attachments/assets/612826d2-9fa0-4a12-9907-59a2b2892b17"  style="margin-top: 20px;" />
-<img width="772" height="570" alt="Screenshot 2026-05-26 200934" src="https://github.com/user-attachments/assets/d26c1f50-4086-4542-a9fa-1d1cc5c31cfc"   style="margin-top: 20px;"/>
+<img width="1896" height="823" alt="Screenshot 2026-05-26 213537" src="https://github.com/user-attachments/assets/c689e3a5-7e93-4b4f-a39d-2ec3bebd4e86" />
 
 </p>
 
-
 ---
-## Toggel to your favourite display mode
+### Stripe Payment
 <p align="center">
-<img width="796" height="251" alt="Screenshot 2026-05-26 201233" src="https://github.com/user-attachments/assets/34c1c156-fb0e-4561-bd85-0c2833e3ad2c" /> 
+<img width="1897" height="785" alt="Screenshot 2026-05-26 213557" src="https://github.com/user-attachments/assets/37afc54c-08e9-48ef-93bf-ccb21c73b207" />
+<img width="1873" height="577" alt="Screenshot 2026-05-26 213616" src="https://github.com/user-attachments/assets/69e51da3-e774-4320-89ca-108c442d8fc8" />
+
+
 </p>
 
 ---
-### Admin analytics dashboard
+### Add Item By Admin
 <p align="center">
-  <img width="1872" height="856" alt="Screenshot 2026-05-26 222014" src="https://github.com/user-attachments/assets/a7ade2ca-d70a-411b-bd3f-31b6d574c1ea" />
+<img width="1883" height="816" alt="Screenshot 2026-05-26 213703" src="https://github.com/user-attachments/assets/ca9fb2ee-0891-4f57-a107-84b0a44fd1a8" />
+
+</p>
+
+---
+### List Item By Admin
+<p align="center">
+<img width="1847" height="672" alt="Screenshot 2026-05-26 213718" src="https://github.com/user-attachments/assets/eb01d0b1-e857-4c57-b19f-3eb22ae5b511" />
+
+</p>
+
+---
+### Order Item By Admin
+<p align="center">
+<img width="1867" height="682" alt="Screenshot 2026-05-26 214447" src="https://github.com/user-attachments/assets/1f940817-e4ac-43c3-abb4-17cc1df48ee8" />
+
+</p>
+
+---
+### Update Profie
+<p align="center">
+<img width="608" height="517" alt="Screenshot 2026-05-26 215044" src="https://github.com/user-attachments/assets/acbdcebf-b7d4-4cf4-b8fa-dca0f6591b9e" />
 
 </p>
 ---
