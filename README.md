@@ -150,10 +150,34 @@ GenZwear is a cutting-edge e-commerce platform designed specifically for the Gen
    npm install
    ```
 
-3. Set up environment variables:
-   ```bash
-   cp .env.example .env
+3. Create a `.env.local` file in the root directory and add your environment variables:
+```env(backend)                
+MONGODB_URI="mongodb+srv://
+CLOUDINARY_API_KEY=
+CLOUDINARY_SECRET_KEY=
+CLOUDINARY_NAME=
+JWT_SECRET="genzwear"
+ADMIN_EMAIL=""
+ADMIN_PASSWORD=""
+STRIPE_SECRET_KEY="sk_test_
+EMAIL_USER=
+EMAIL_PASS=
+FRONTEND_URL=
+
+
+
+VITE_BACKEND_URL="http://localhost:4000"------genzwear/frontend/
+
+
+VITE_BACKEND_URL="http://localhost:4000"-------genzwear/admin/
+
+
+```
+
+
    ```
+
+  
 
 4. Configure your database and other settings in the `.env` file
 
