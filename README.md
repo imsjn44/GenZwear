@@ -142,7 +142,7 @@ GenZwear is a cutting-edge e-commerce platform designed specifically for the Gen
 1. Clone the repository:
    ```bash
    git clone https://github.com/imsjn44/GenZwear.git
-   cd GenZwear
+   cd genzwear
    ```
 
 2. Install dependencies:
